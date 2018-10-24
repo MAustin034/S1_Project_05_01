@@ -9,49 +9,104 @@
    Author: Mickal Austin
    Date:   10.23.18
    
-   Filename: sp_layout.css
-
+  Filename: sp_layout.css
 */
 
 /* Window and Body Styles */
+html {
+    height: 100%;
+}
 
-
-
-
+body {
+    width: 95%;
+    min-width: 640px;
+    max-width: 960px;
+    margin: auto;
+    min-height: 100%;
+}
+/* This sets a minimum for the body mainly. The html element is going to take up 100% of the web page while the body will take up 95% of the html's width with the minimum width being 640 pixels and a max of 960 pixels. */
 /* Row Styles */
-
-
-
-
-
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* This sets the content in the class row to fill up all the space of its parent element since the floats are cleared. */
 /* Page Header Styles */
+header img {
+    display: block;
+    width: 70%;
+    float: left;
+}
 
+header nav {
+    float: left;
+    padding: 0 2% 0 2%;
+    width: 30%;
+}
 
-
-
-
-
+header nav a {
+    display: block;
+    width: 100%;
+}
+/* This sets the width, floats, width, and padding for the images, nav, and anchors nested within the nav to have a certain width. This also sets the display for the header img and anchors to block so it starts on a new line and takes up the whole width. */
 /* Horizontal Navigation List Styles */
+.horizontal li {
+    display: block;
+    width: 12.5%;
+    float: left;
+}
 
 
-
-
+/* This sets every list item nested in the horizontal class to display as block, float the content to the left, and make its width 12.5% */
 /* Topics Styles */
+#topics li {
+    display: block;
+    width: 20%;
+    float: left;
+    margin: 0 1.5% 0 0%;
+}
 
+#topics li:first-of-type {
+    margin: 0 0 0 7.75%;
+}
+#topics li:last-of-type {
+    margin: 0 7.75% 0 0;
+}
 
-
-
-
-
+#topics li img {
+    display: block;
+    width: 50%;
+    margin: 0 auto 0 auto; 
+}
+/* This is all the styles for the id topics. This is made to set the list items within the topics id to have a certain width, float left, display as block and have a certain margin */
 /* HR Styles */
-
-
-
-
+hr {
+    width: 50%;
+}
+/* sets the width for hr to 50% */
 /* Customer Comment Styles */
+#comments  {
+    width: 75%;
+    margin: 40px auto 40px auto;
+}
 
-
-
+#comments li {
+    display: block;
+    width: 50%;
+    float: left;
+    margin-bottom: 30px;
+}
+#comments img {
+    
+    display: block;
+    width: 20%;
+    float: left;
+    margin: 0 5% 0 5%;
+}
+/* This sets everything nested within the id of comments to have a certain width, margin, and for list items and images it also sets the display as block, floats to the left. */
 /* Footer Styles */
-
-
+footer {
+    clear: both;
+}
+/* Clears both the left and right floats in the footer selector */

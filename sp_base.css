@@ -8,7 +8,6 @@
    Base Style Sheet for the Slate & Pencil Website
    
    Filename: sp_base.css
-
 */
 
 article, aside, figcaption, figure,
@@ -39,4 +38,10 @@ nav a {
 
 body {
    line-height: 1;
+}
+
+header, ul, nav, li, a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  
 }
